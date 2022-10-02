@@ -10,7 +10,7 @@ const markAllAsRead = document.querySelector(".button");
 markAllAsRead.addEventListener("click", () => {
   for (let onRead of unreadMssg) {
     onRead.classList.remove("unreadMssg");
-    onRead.classList.add("no-after");
+    onRead.classList.add("no-after"); // Remove red notificationdot
   }
   counter.innerText = 0;
   dot.classList.add("no-after"); // This only works for the first element
