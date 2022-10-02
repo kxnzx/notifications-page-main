@@ -100,7 +100,7 @@ h1 {
 }
 @media screen and (min-width: 1024px) {
   h1 {
-    font-size: 1rem;
+    font-size: 1.675rem;
   }
 }
 
@@ -112,7 +112,7 @@ h1 {
 }
 @media screen and (min-width: 1024px) {
   .unreadMssgNumber {
-    font-size: 1rem;
+    font-size: 1.275rem;
   }
 }
 
