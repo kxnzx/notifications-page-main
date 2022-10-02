@@ -1,0 +1,317 @@
+@font-face {
+  font-family: "PlusJakartaSans-VariableFont";
+  src: url("../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+  font-weight: 100 1000;
+}
+@font-face {
+  font-family: "plusJakartaSans-Medium";
+  src: url("../assets/fonts/static/PlusJakartaSans-Medium.ttf");
+}
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "PlusJakartaSans-Medium", sans-serif;
+  background-color: hsl(210deg, 60%, 98%);
+}
+
+main {
+  height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+section {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 12px;
+  max-width: 23.438rem;
+}
+@media screen and (min-width: 1024px) {
+  section {
+    max-width: 45.625rem;
+  }
+}
+
+header,
+ul {
+  margin: 0 0.938rem 0 0.938rem;
+}
+@media screen and (min-width: 1024px) {
+  header,
+ul {
+    margin: 0 2.125rem 0 2.125rem;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.563rem 0 1.563rem 0;
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+}
+
+h1,
+.unreadMssgNumber,
+.profileName,
+.post,
+.group {
+  font-family: "PlusJakartaSans-VariableFont", sans-serif;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 1.125rem;
+  color: hsl(224deg, 21%, 14%);
+}
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 1rem;
+  }
+}
+
+.unreadMssgNumber {
+  background-color: hsl(219deg, 85%, 26%);
+  color: hsl(0deg, 0%, 100%);
+  padding: 0.095rem 0.725rem 0.095rem 0.725rem;
+  border-radius: 8px;
+}
+@media screen and (min-width: 1024px) {
+  .unreadMssgNumber {
+    font-size: 1rem;
+  }
+}
+
+button {
+  color: hsl(219deg, 12%, 42%);
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+button:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+@media screen and (min-width: 1024px) {
+  button {
+    font-size: 1rem;
+  }
+}
+
+li {
+  font-size: 0.875rem;
+  padding: 0.938rem;
+}
+li:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+@media screen and (min-width: 1024px) {
+  li {
+    font-size: 1rem;
+  }
+}
+
+.unreadMssg {
+  background-color: hsl(210deg, 60%, 98%);
+  border-radius: 9px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  -moz-column-gap: 0.938rem;
+       column-gap: 0.938rem;
+}
+
+.pm {
+  grid-template-rows: auto auto auto;
+}
+
+.cp {
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 2.313rem auto;
+}
+@media screen and (min-width: 1024px) {
+  .cp {
+    grid-template-rows: 1.375rem 1.375rem;
+  }
+}
+
+.message {
+  width: 100%;
+  color: hsl(219deg, 14%, 63%);
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+.notificationDot:nth-child(-n+3)::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f111";
+  color: hsl(1deg, 90%, 64%);
+  font-size: 0.5rem;
+  position: absolute;
+  transform: translateY(50%);
+  margin-left: 0.375rem;
+}
+
+.notificationDot.no-after::after {
+  content: none;
+}
+
+.profilePicture {
+  grid-row: 1/3;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+}
+.profilePicture::after {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.MW::after {
+  background-image: url(../assets/images/avatar-mark-webber.webp);
+}
+
+.AG::after {
+  background-image: url(../assets/images/avatar-angela-gray.webp);
+}
+
+.JT::after {
+  background-image: url(../assets/images/avatar-jacob-thompson.webp);
+}
+
+.RH::after {
+  background-image: url(../assets/images/avatar-rizky-hasanuddin.webp);
+}
+
+.KM {
+  grid-row: 1/3;
+}
+.KM::after {
+  background-image: url(../assets/images/avatar-kimberly-smith.webp);
+}
+
+.NP::after {
+  background-image: url(../assets/images/avatar-nathan-peterson.webp);
+}
+
+.AK::after {
+  background-image: url(../assets/images/avatar-anna-kim.webp);
+}
+
+.profileName {
+  color: hsl(224deg, 21%, 14%);
+  padding-right: 0.25rem;
+}
+.profileName:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+
+.post {
+  color: hsl(219deg, 12%, 42%);
+  padding-left: 0.05rem;
+}
+.post:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+
+.group {
+  color: hsl(219deg, 85%, 26%);
+  padding-left: 0.25rem;
+}
+
+.commentedPicture::after {
+  content: "";
+  background-image: url(../assets/images/image-chess.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: inline-block;
+  transform: translateY(5%);
+  grid-row: 1/3;
+  grid-column: 3/4;
+}
+
+.activeStatus {
+  display: block;
+  color: hsl(219deg, 14%, 63%);
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.privateMessage {
+  border: solid hsl(205deg, 33%, 90%) 1px;
+  border-radius: 5px;
+  color: hsl(219deg, 14%, 63%);
+  width: 16.25rem;
+  padding: 0.875rem;
+  grid-row: 3/4;
+  grid-column: 2/3;
+  margin-top: 0.938rem;
+}
+.privateMessage a {
+  color: hsl(219deg, 14%, 63%);
+}
+.privateMessage:hover {
+  background-color: hsl(205deg, 33%, 90%);
+}
+@media screen and (min-width: 1024px) {
+  .privateMessage {
+    max-width: 36rem;
+    width: 100%;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: hsl(224deg, 21%, 14%);
+  font-size: 0.875rem;
+}
+footer a {
+  color: hsl(219deg, 14%, 63%);
+}/*# sourceMappingURL=style.css.map */

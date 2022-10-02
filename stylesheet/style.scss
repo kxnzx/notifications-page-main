@@ -1,0 +1,335 @@
+// VARIABLES
+// Colors
+// primary colors
+$red: hsl(1, 90%, 64%);
+$blue: hsl(219, 85%, 26%);
+// neutral colors
+$white: hsl(0, 0%, 100%);
+$very_light_grayish_blue: hsl(210, 60%, 98%);
+$light_grayish_blue_1: hsl(211, 68%, 94%);
+$light_grayish_blue_2: hsl(205, 33%, 90%);
+$grayish_blue: hsl(219, 14%, 63%);
+$dark_grayish_blue: hsl(219, 12%, 42%);
+$very_dark_blue: hsl(224, 21%, 14%);
+// Typography
+// font-family
+// Variable
+@font-face {
+  font-family: "PlusJakartaSans-VariableFont";
+  src: url("../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+  font-weight: 100 1000;
+}
+// Static
+@font-face {
+  font-family: "plusJakartaSans-Medium";
+  src: url("../assets/fonts/static/PlusJakartaSans-Medium.ttf");
+}
+// font-weight
+$fw_medium: 500;
+$fw_extraBold: 800;
+// font-size
+$fs_bodyCopy: 1rem;
+// Breakpoints
+$mobile: 640px;
+$tablet: 768px;
+$xl_tablet: 960px;
+$desktop: 1024px;
+// RESET
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// STYLES (Mobile First)
+body {
+  font-family: "PlusJakartaSans-Medium", sans-serif;
+  background-color: $very_light_grayish_blue;
+}
+
+main {
+  height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+section {
+  background-color: $white;
+  border-radius: 12px;
+  max-width: 23.438rem;
+  @media screen and (min-width: $desktop) {
+    max-width: 45.625rem;
+  }
+}
+
+header,
+ul {
+  margin: 0 0.938rem 0 0.938rem;
+  @media screen and (min-width: $desktop) {
+    margin: 0 2.125rem 0 2.125rem;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.563rem 0 1.563rem 0;
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+}
+
+// Variable Font
+h1,
+.unreadMssgNumber,
+.profileName,
+.post,
+.group {
+  font-family: "PlusJakartaSans-VariableFont", sans-serif;
+  font-weight: $fw_extraBold;
+}
+
+h1 {
+  font-size: 1.125rem;
+  color: $very_dark_blue;
+  @media screen and (min-width: $desktop) {
+    font-size: $fs_bodyCopy;
+  }
+}
+
+.unreadMssgNumber {
+  background-color: $blue;
+  color: $white;
+  padding: 0.095rem 0.725rem 0.095rem 0.725rem;
+  border-radius: 8px;
+  @media screen and (min-width: $desktop) {
+    font-size: $fs_bodyCopy;
+  }
+}
+
+// Mark all as read
+button {
+  color: $dark_grayish_blue;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  &:hover {
+    color: $blue;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: $fs_bodyCopy;
+  }
+}
+
+li {
+  font-size: 0.875rem;
+  padding: 0.938rem;
+  &:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: $fs_bodyCopy;
+  }
+}
+
+.unreadMssg {
+  background-color: $very_light_grayish_blue;
+  border-radius: 9px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.938rem;
+}
+
+.pm {
+  grid-template-rows: auto auto auto;
+}
+
+.cp {
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 2.313rem auto;
+  @media screen and (min-width: $desktop) {
+    grid-template-rows: 1.375rem 1.375rem;
+  }
+}
+
+.message {
+  width: 100%;
+  color: $grayish_blue;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+// Red Notification Dot
+.notificationDot:nth-child(-n + 3)::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f111";
+  color: $red;
+  font-size: 0.5rem;
+  position: absolute;
+  transform: translateY(50%);
+  margin-left: 0.375rem;
+}
+
+// Remove Notification Dot in JS
+.notificationDot.no-after::after {
+  content: none;
+}
+
+.profilePicture {
+  grid-row: 1 / 3;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  &::after {
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+// Profile Pictures
+.MW::after {
+  background-image: url(../assets/images/avatar-mark-webber.webp);
+}
+
+.AG::after {
+  background-image: url(../assets/images/avatar-angela-gray.webp);
+}
+
+.JT::after {
+  background-image: url(../assets/images/avatar-jacob-thompson.webp);
+}
+
+.RH::after {
+  background-image: url(../assets/images/avatar-rizky-hasanuddin.webp);
+}
+
+.KM {
+  grid-row: 1/3;
+  &::after {
+    background-image: url(../assets/images/avatar-kimberly-smith.webp);
+  }
+}
+
+.NP::after {
+  background-image: url(../assets/images/avatar-nathan-peterson.webp);
+}
+
+.AK::after {
+  background-image: url(../assets/images/avatar-anna-kim.webp);
+}
+// End Profile Pictures
+
+.profileName {
+  color: $very_dark_blue;
+  padding-right: 0.25rem;
+  &:hover {
+    color: $blue;
+  }
+}
+
+.post {
+  color: $dark_grayish_blue;
+  padding-left: 0.05rem;
+  &:hover {
+    color: $blue;
+  }
+}
+
+.group {
+  color: $blue;
+  padding-left: 0.25rem;
+}
+
+.commentedPicture {
+  &::after {
+    content: "";
+    background-image: url(../assets/images/image-chess.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-block;
+    transform: translateY(5%);
+    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+  }
+}
+
+.activeStatus {
+  display: block;
+  color: $grayish_blue;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.privateMessage {
+  border: solid $light_grayish_blue_2 1px;
+  border-radius: 5px;
+  color: $grayish_blue;
+  width: 16.25rem;
+  padding: 0.875rem;
+  grid-row: 3/4;
+  grid-column: 2 / 3;
+  margin-top: 0.938rem;
+  a {
+    color: $grayish_blue;
+  }
+  &:hover {
+    background-color: $light_grayish_blue_2;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 36rem;
+    width: 100%;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: $very_dark_blue;
+  font-size: 0.875rem;
+  a {
+    color: $grayish_blue;
+  }
+}

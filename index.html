@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="stylesheet/style.css" />
+    <title>Frontend Mentor | Notifications page</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <header>
+          <div class="heading">
+            <h1>Notifications</h1>
+            <span class="unreadMssgNumber">3</span>
+          </div>
+          <button class="button" id="button">Mark all as read</button>
+        </header>
+        <ul>
+          <!-- Mark Webber -->
+          <li class="unreadMssg">
+            <div class="gridContainer">
+              <a class="profilePicture MW" href="#"> </a>
+              <p class="message notificationDot">
+                <a class="profileName" href="#">Mark Webber</a> reacted to your
+                recent post
+                <a class="post" href=""> My first tournament today! </a>
+              </p>
+              <p class="activeStatus">1m ago</p>
+            </div>
+          </li>
+          <!-- Angela Gray -->
+          <li class="unreadMssg">
+            <div class="gridContainer">
+              <a class="profilePicture AG" href="#"></a>
+              <p class="message notificationDot">
+                <a class="profileName" href="#">Angela Gray</a> followed you
+              </p>
+              <p class="activeStatus">5m ago</p>
+            </div>
+          </li>
+          <!-- Jacob Thompson -->
+          <li class="unreadMssg">
+            <div class="gridContainer">
+              <a class="profilePicture JT" href="#"></a>
+              <p class="message notificationDot">
+                <a class="profileName" href="#">Jacob Thompson</a> has joined
+                your group
+                <a class="group" href="">Chess Club</a>
+              </p>
+              <p class="activeStatus">1 day ago</p>
+            </div>
+          </li>
+          <!-- Rizky Hasanuddin -->
+          <li>
+            <div class="gridContainer pm">
+              <a class="profilePicture RH" href="#"></a>
+              <p class="message">
+                <a class="profileName" href="#">Rizky Hasanuddin</a> sent you a
+                private message
+              </p>
+              <p class="activeStatus">5 day ago</p>
+              <!-- Private Message-->
+              <p class="privateMessage">
+                <a href="#">
+                  Hello, thanks for setting up the Chess Club. I've been a
+                  member for a few weeks now and I'm already having lots of fun
+                  and improving my game.
+                </a>
+              </p>
+            </div>
+          </li>
+          <!-- Kimberly Smith -->
+          <li>
+            <div class="gridContainer cp">
+              <a class="profilePicture KM" href="#"></a>
+              <p class="message">
+                <a class="profileName" href="#">Kimberly Smith</a> commented on
+                your picture
+              </p>
+              <a class="commentedPicture" href=""></a>
+              <p class="activeStatus">1 week ago</p>
+            </div>
+          </li>
+          <!-- Nathan Peterson -->
+          <li>
+            <div class="gridContainer">
+              <a class="profilePicture NP" href="#"></a>
+              <p class="message">
+                <a class="profileName" href="#">Nathan Peterson</a> reacted to
+                your recent post
+                <a class="post" href="">
+                  5 end-game strategies to increase your win rate
+                </a>
+              </p>
+              <p class="activeStatus">2 week ago</p>
+            </div>
+          </li>
+          <!-- Anna Kim -->
+          <li>
+            <div class="gridContainer">
+              <a class="profilePicture AK" href="#"></a>
+              <p class="message">
+                <a class="profileName" href="#">Anna Kim</a>
+                left the group <a class="group" href="">Chess Club</a>
+              </p>
+              <p class="activeStatus">2 week ago</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/kxnzx" target="_blank"
+        >kxnzx</a
+      >.
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
