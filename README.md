@@ -26,12 +26,18 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+#### Screensize 1440px - Desktop
+
+![Desktop](./assets/images/Desktop.gif)
+
+#### Screensize 375px - Mobile
+
+![Mobile](./assets/images/Mobile.gif)
 
 ### Links
 
-- View my Solution on [Frontend Mentor](https://your-solution-url.com)
-- View the [Live Site](https://your-live-site-url.com)
+- View my Solution on [Frontend Mentor](https://www.frontendmentor.io/solutions/notification-page-made-with-vanilla-javascript-NWnUcen1iP)
+- View the [Live Site](https://kxnzx.github.io/notifications-page-main/)
 
 ## My process
 
