@@ -61,7 +61,7 @@ Users should be able to:
 
 I have gained some insight about how typography works on the web.
 
-For this challenge I choose to use both Static & Variable Font(s). By doing this I have learned the difference between them.
+For this challenge I choose to use both Static & Variable Fonts. By doing this I have learned the difference between them.
 
 Static Fonts:
 Each width, weight, or style has it's own seperate font file, which requires multiple HTTP requests.
